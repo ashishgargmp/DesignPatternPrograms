@@ -1,2 +1,2 @@
 # DesignPatternPrograms
-This contains program that detail out the programs
+This contain programs that detail out the design patterns
