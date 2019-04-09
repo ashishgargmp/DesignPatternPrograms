@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyDesignPattern.Creational.FactoryMethod.With
+namespace MyDesignPattern.Creational.SimpleFactory.With
 {
-    public class OneBHKApartment: ApartmentWithFactMthd
+    public class TwoBHKApartment: ApartmentWithSimpleFact
     {
         protected override string PrintApartment()
         {
-            return "You've selected 1BHK apartment!";
+            return "You've selected 2BHK apartment!";
         }
     }
 }
