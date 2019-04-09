@@ -43,15 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Creational\FactoryMethod\Without\ApartmentWithoutFactMthd.cs" />
-    <Compile Include="Creational\FactoryMethod\Enums.cs" />
-    <Compile Include="Creational\FactoryMethod\Without\ClientWithoutFactMthd.cs" />
-    <Compile Include="Creational\FactoryMethod\Without\OneBHKApartment.cs" />
-    <Compile Include="Creational\FactoryMethod\Without\TwoBHKApartment.cs" />
-    <Compile Include="Creational\FactoryMethod\With\ApartmentWithFactMthd.cs" />
-    <Compile Include="Creational\FactoryMethod\With\ClientWithFactMthd.cs" />
-    <Compile Include="Creational\FactoryMethod\With\OneBHKApartment.cs" />
-    <Compile Include="Creational\FactoryMethod\With\TwoBHKApartment.cs" />
+    <Compile Include="Creational\SimpleFactory\Without\ApartmentWithoutSimpleFact.cs" />
+    <Compile Include="Creational\SimpleFactory\Enums.cs" />
+    <Compile Include="Creational\SimpleFactory\Without\ClientWithoutSimpleFact.cs" />
+    <Compile Include="Creational\SimpleFactory\Without\OneBHKApartment.cs" />
+    <Compile Include="Creational\SimpleFactory\Without\TwoBHKApartment.cs" />
+    <Compile Include="Creational\SimpleFactory\With\ApartmentWithSimpleFact.cs" />
+    <Compile Include="Creational\SimpleFactory\With\ClientWithSimpleFact.cs" />
+    <Compile Include="Creational\SimpleFactory\With\OneBHKApartment.cs" />
+    <Compile Include="Creational\SimpleFactory\With\TwoBHKApartment.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -63,7 +63,7 @@
     <Folder Include="Creational\Builder\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Creational\FactoryMethod\Help.txt" />
+    <Content Include="Creational\SimpleFactory\Help.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

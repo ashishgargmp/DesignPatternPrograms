@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyDesignPattern.Creational.FactoryMethod.Without
+namespace MyDesignPattern.Creational.SimpleFactory.With
 {
-    public class OneBHKApartment: ApartmentWithoutFactMthd
+    public class OneBHKApartment: ApartmentWithSimpleFact
     {
         protected override string PrintApartment()
         {

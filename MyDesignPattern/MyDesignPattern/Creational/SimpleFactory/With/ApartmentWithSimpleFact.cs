@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MyDesignPattern.Creational.FactoryMethod.Enums;
+using MyDesignPattern.Creational.SimpleFactory.Enums;
 
-namespace MyDesignPattern.Creational.FactoryMethod.Without
+namespace MyDesignPattern.Creational.SimpleFactory.With
 {
-    public class ClientWithoutFactMthd
+    public abstract class ApartmentWithSimpleFact
     {
-        private ApartmentWithoutFactMthd aprtmntObj;
+        protected abstract string PrintApartment();
 
-        public ClientWithoutFactMthd(ApartmentType type)
+        public ApartmentWithSimpleFact Create(ApartmentType type)
         {
+            ApartmentWithSimpleFact aprtmntObj;
+
             if (type == ApartmentType.OneBHK)
             {
                 aprtmntObj = new OneBHKApartment();
@@ -23,6 +25,8 @@ namespace MyDesignPattern.Creational.FactoryMethod.Without
             }
             else
                 aprtmntObj = null;
+
+            return aprtmntObj;
         }
     }
 }
