@@ -43,6 +43,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\AbstractFactoryAgent.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\CreatorClasses\AppleWidgetFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\CreatorClasses\GoogleWidgetFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\Interfaces\IButton.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\Interfaces\IScrollbar.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\Interfaces\IToolbar.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\Interfaces\IWidgetFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\CreatorClasses\MicrosoftWidgetFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\Enums.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\Interfaces\IWindow.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Button\MicrosoftButton.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Button\GoogleButton.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Button\AppleButton.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Scrollbar\AppleScrollbar.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Scrollbar\GoogleScrollbar.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Scrollbar\MicrosoftScrollbar.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Toolbar\AppleToolbar.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Toolbar\GoogleToolbar.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Toolbar\MicrosoftToolbar.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Window\AppleWindow.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Window\GoogleWindow.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Window\MicrosoftWindow.cs" />
     <Compile Include="Creational\FactoryMethod\Enums.cs" />
     <Compile Include="Creational\FactoryMethod\IInteriorProduct.cs" />
     <Compile Include="Creational\FactoryMethod\InteriorCreator.cs" />
@@ -62,7 +84,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Creational\AbstractFactory\" />
     <Folder Include="Creational\Builder\" />
   </ItemGroup>
   <ItemGroup>
