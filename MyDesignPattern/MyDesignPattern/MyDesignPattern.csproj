@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Creational\FactoryMethod\Enums.cs" />
+    <Compile Include="Creational\FactoryMethod\IInteriorProduct.cs" />
+    <Compile Include="Creational\FactoryMethod\InteriorCreator.cs" />
     <Compile Include="Creational\SimpleFactory\Without\ApartmentWithoutSimpleFact.cs" />
     <Compile Include="Creational\SimpleFactory\Enums.cs" />
     <Compile Include="Creational\SimpleFactory\Without\ClientWithoutSimpleFact.cs" />
