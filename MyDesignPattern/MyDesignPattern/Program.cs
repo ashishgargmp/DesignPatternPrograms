@@ -1,4 +1,6 @@
-﻿using MyDesignPattern.Creational.FactoryMethod;
+﻿using MyDesignPattern.Creational.AbstractFactory.WidgetFactory;
+using MyDesignPattern.Creational.AbstractFactory.WidgetFactory.Interfaces;
+using MyDesignPattern.Creational.FactoryMethod;
 using MyDesignPattern.Creational.FactoryMethod.Enums;
 using System;
 using System.Collections.Generic;
@@ -10,15 +12,84 @@ namespace MyDesignPattern
 {
     class Program
     {
-        private static TestDifferentDesignPatterns objTestDesignPatterns; 
+        private static TestDifferentDesignPatterns objTestDesignPatterns;
         static void Main(string[] args)
         {
-            objTestDesignPatterns = new TestDifferentDesignPatterns();
-
             // Test Factory method pattern
-            objTestDesignPatterns.FactoryMethodClient();
+            //objTestDesignPatterns = new TestDifferentDesignPatterns();
+            //objTestDesignPatterns.FactoryMethodClient();
+
+            // Test Abstract factory design pattern
+            WidgetClient widgetClientObj = new WidgetClient(WidgetCreatorName.Apple);
+            Console.WriteLine("---------------APPLE Widgets-------------");
+            Console.WriteLine(widgetClientObj.Button.GetName());
+            Console.WriteLine(widgetClientObj.Scrollbar.GetName());
+            Console.WriteLine(widgetClientObj.Toolbar.GetName());
+            Console.WriteLine(widgetClientObj.Window.GetName());
+            Console.WriteLine();
+
+            Console.WriteLine("---------------Microsoft Widgets-------------");
+            widgetClientObj = new WidgetClient(WidgetCreatorName.Microsoft);
+            Console.WriteLine(widgetClientObj.Button.GetName());
+            Console.WriteLine(widgetClientObj.Scrollbar.GetName());
+            Console.WriteLine(widgetClientObj.Toolbar.GetName());
+            Console.WriteLine(widgetClientObj.Window.GetName());
+            Console.WriteLine();
+
+            widgetClientObj = new WidgetClient(WidgetCreatorName.Google);
+            Console.WriteLine("---------------Google Widgets-------------");
+            Console.WriteLine(widgetClientObj.Button.GetName());
+            Console.WriteLine(widgetClientObj.Scrollbar.GetName());
+            Console.WriteLine(widgetClientObj.Toolbar.GetName());
+            Console.WriteLine(widgetClientObj.Window.GetName());
+
+            Console.ReadKey();
         }
     }
+
+    public class WidgetClient
+    {
+        private IWidgetFactory widgetFactoryObj;  
+        private IWindow windowObj;
+        private IScrollbar scrollbarObj;
+        private IToolbar toolbarObj;
+        private IButton btnObj;
+
+        public WidgetClient(WidgetCreatorName widgetCreaterName)
+        {
+            AbstractFactoryAgent objAbstractFactoryAgent = new AbstractFactoryAgent(widgetCreaterName);
+            widgetFactoryObj = objAbstractFactoryAgent.GetFactoryObject();
+            Window = widgetFactoryObj.CreateWindow();
+            Scrollbar = widgetFactoryObj.CreateScrollBar();
+            Toolbar = widgetFactoryObj.CreateToolBar();
+            Button = widgetFactoryObj.CreateButtons();
+        }
+
+        public IWindow Window
+        {
+            get => windowObj;
+            set => windowObj = value;
+        }
+
+        public IScrollbar Scrollbar
+        {
+            get => scrollbarObj;
+            set => scrollbarObj = value;
+        }
+
+        public IToolbar Toolbar
+        {
+            get => toolbarObj;
+            set => toolbarObj = value;
+        }
+
+        public IButton Button
+        {
+            get => btnObj;
+            set => btnObj = value;
+        }
+    }
+       
 
     public class TestDifferentDesignPatterns
     {
