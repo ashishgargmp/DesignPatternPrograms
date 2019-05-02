@@ -1,0 +1,22 @@
+CREATE A NEW BRANCH
+git checkout -b ashish1772000_branch
+
+SWITCH To MASTER BRANCH
+git checkout master 
+
+SWITCH BACK TO NEW BRANCH
+git checkout ashish1772000_branch
+
+ADDING NEW FILES FOR STAGING
+git add *
+
+COMMIT ALL THE STAGED FILES 
+git commit -m "Message"
+
+PUSH THE CHANGES TO GITHUB AT THE BRANCH LEVEL
+git push --set-upstream origin ashish1772000_branch
+
+git request-pull
+git fetch upstream
+git merge upstream/master
+git remote -v
