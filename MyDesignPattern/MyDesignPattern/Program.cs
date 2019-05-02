@@ -1,6 +1,7 @@
 ﻿using MyDesignPattern.Creational.AbstractFactory.WidgetFactory;
 using MyDesignPattern.Creational.AbstractFactory.WidgetFactory.Interfaces;
 using MyDesignPattern.Creational.FactoryMethod;
+using MyDesignPattern.Structural.Proxy;
 using MyDesignPattern.Creational.FactoryMethod.Enums;
 using System;
 using System.Collections.Generic;
@@ -12,14 +13,24 @@ namespace MyDesignPattern
 {
     class Program
     {
-        private static TestDifferentDesignPatterns objTestDesignPatterns;
         static void Main(string[] args)
         {
-            // Test Factory method pattern
-            //objTestDesignPatterns = new TestDifferentDesignPatterns();
-            //objTestDesignPatterns.FactoryMethodClient();
+            #region Test proxy pattern
+            ProxyManager mgr = new ProxyManager();
+            string strMessage = mgr.Work();
+            Console.WriteLine(strMessage);
+            #endregion Test proxy pattern 
 
-            // Test Abstract factory design pattern
+            #region Test Factory method pattern
+            /*
+            TestDifferentDesignPatterns objTestDesignPatterns;
+            objTestDesignPatterns = new TestDifferentDesignPatterns();
+            objTestDesignPatterns.FactoryMethodClient();
+            */
+            #endregion Test Factory method pattern
+
+            #region Test Abstract factory design pattern
+            /*
             WidgetClient widgetClientObj = new WidgetClient(WidgetCreatorName.Apple);
             Console.WriteLine("---------------APPLE Widgets-------------");
             Console.WriteLine(widgetClientObj.Button.GetName());
@@ -41,7 +52,9 @@ namespace MyDesignPattern
             Console.WriteLine(widgetClientObj.Button.GetName());
             Console.WriteLine(widgetClientObj.Scrollbar.GetName());
             Console.WriteLine(widgetClientObj.Toolbar.GetName());
-            Console.WriteLine(widgetClientObj.Window.GetName());
+            Console.WriteLine(widgetClientObj.Window.GetName()); 
+            */
+            #endregion Test Abstract factory design pattern
 
             Console.ReadKey();
         }

@@ -79,6 +79,9 @@
     <Compile Include="Creational\SimpleFactory\With\TwoBHKApartment.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structural\Proxy\IManager.cs" />
+    <Compile Include="Structural\Proxy\ProxyManager.cs" />
+    <Compile Include="Structural\Proxy\SalesManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
