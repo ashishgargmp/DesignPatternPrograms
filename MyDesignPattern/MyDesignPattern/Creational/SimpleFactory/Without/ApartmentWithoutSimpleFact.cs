@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyDesignPattern.Creational.FactoryMethod.Without
+namespace MyDesignPattern.Creational.SimpleFactory.Without
 {
-    public abstract class ApartmentWithoutFactMthd
+    public abstract class ApartmentWithoutSimpleFact
     {
         protected abstract string PrintApartment();
     }

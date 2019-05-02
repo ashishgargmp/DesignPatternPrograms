@@ -43,27 +43,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Creational\FactoryMethod\Without\ApartmentWithoutFactMthd.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\AbstractFactoryAgent.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\CreatorClasses\AppleWidgetFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\CreatorClasses\GoogleWidgetFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\Interfaces\IButton.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\Interfaces\IScrollbar.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\Interfaces\IToolbar.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\Interfaces\IWidgetFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\CreatorClasses\MicrosoftWidgetFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\Enums.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\Interfaces\IWindow.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Button\MicrosoftButton.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Button\GoogleButton.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Button\AppleButton.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Scrollbar\AppleScrollbar.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Scrollbar\GoogleScrollbar.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Scrollbar\MicrosoftScrollbar.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Toolbar\AppleToolbar.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Toolbar\GoogleToolbar.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Toolbar\MicrosoftToolbar.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Window\AppleWindow.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Window\GoogleWindow.cs" />
+    <Compile Include="Creational\AbstractFactory\WidgetFactory\ProductClasses\Window\MicrosoftWindow.cs" />
     <Compile Include="Creational\FactoryMethod\Enums.cs" />
-    <Compile Include="Creational\FactoryMethod\Without\ClientWithoutFactMthd.cs" />
-    <Compile Include="Creational\FactoryMethod\Without\OneBHKApartment.cs" />
-    <Compile Include="Creational\FactoryMethod\Without\TwoBHKApartment.cs" />
-    <Compile Include="Creational\FactoryMethod\With\ApartmentWithFactMthd.cs" />
-    <Compile Include="Creational\FactoryMethod\With\ClientWithFactMthd.cs" />
-    <Compile Include="Creational\FactoryMethod\With\OneBHKApartment.cs" />
-    <Compile Include="Creational\FactoryMethod\With\TwoBHKApartment.cs" />
+    <Compile Include="Creational\FactoryMethod\IInteriorProduct.cs" />
+    <Compile Include="Creational\FactoryMethod\InteriorCreator.cs" />
+    <Compile Include="Creational\SimpleFactory\Without\ApartmentWithoutSimpleFact.cs" />
+    <Compile Include="Creational\SimpleFactory\Enums.cs" />
+    <Compile Include="Creational\SimpleFactory\Without\ClientWithoutSimpleFact.cs" />
+    <Compile Include="Creational\SimpleFactory\Without\OneBHKApartment.cs" />
+    <Compile Include="Creational\SimpleFactory\Without\TwoBHKApartment.cs" />
+    <Compile Include="Creational\SimpleFactory\With\ApartmentWithSimpleFact.cs" />
+    <Compile Include="Creational\SimpleFactory\With\ClientWithSimpleFact.cs" />
+    <Compile Include="Creational\SimpleFactory\With\OneBHKApartment.cs" />
+    <Compile Include="Creational\SimpleFactory\With\TwoBHKApartment.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structural\Proxy\IManager.cs" />
+    <Compile Include="Structural\Proxy\ProxyManager.cs" />
+    <Compile Include="Structural\Proxy\SalesManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Creational\AbstractFactory\" />
     <Folder Include="Creational\Builder\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Creational\FactoryMethod\Help.txt" />
+    <Content Include="Creational\SimpleFactory\Help.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

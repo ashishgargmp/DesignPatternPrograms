@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyDesignPattern.Creational.FactoryMethod.Enums
+namespace MyDesignPattern.Creational.AbstractFactory.WidgetFactory.Interfaces
 {
-    public enum InteriorFactoryType
+    public interface IButton
     {
-        ABC, 
-        XYZ
+        string GetName();
     }
 }
